@@ -5,22 +5,22 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    screens:{
-      msm:'350px',
-      sm:'576px',
-      md:'768px',
-      lg:'976px',
-      xl:'1440px',
+    screens: {
+      msm: '350px',
+      sm: '576px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
     },
     extend: {
-      boxShadow:{
+      boxShadow: {
         '3xl': '2px 2px 10px 0px  rgba(0,0,0,0.2)'
       },
     },
-    // borderRadius:{
-    //   border
-    // }
   },
-  plugins: [],
+  plugins: [
+    // eslint-disable-next-line no-undef
+    require("@tailwindcss/forms")
+  ],
 }
 
