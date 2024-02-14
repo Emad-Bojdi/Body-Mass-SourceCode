@@ -1,5 +1,5 @@
 import BMIresult from "./BMIresult/BMIresult";
-
+import pic1 from "../../assets/Pic1.png";
 
 const Bodymass = () => {
   return (
@@ -42,6 +42,11 @@ const Bodymass = () => {
             <div className=""></div>
           </div>
           <BMIresult/>
+        </div>
+        <div className="w-full h-4/5 flex flex-col items-center">
+          <div className="w-full h-4/5 relative rounded-3xl bg-cyan-50 flex flex-col items-center top-[550px]">
+          <img src={pic1} alt=" a picture!" className="w-4/5 h-auto bg-inherit" />
+          </div>
         </div>
       </div>
     </>
