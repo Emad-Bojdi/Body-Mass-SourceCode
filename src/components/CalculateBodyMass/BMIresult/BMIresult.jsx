@@ -1,14 +1,14 @@
-const BMIresult = () => {
+const BMIresult = ({title,content,result}) => {
   return (
     <>
       <div className="w-full h-auto  flex flex-col items-center py-6 ">
         <div className="w-3/4 h-auto flex flex-col bg-cyan-600 p-8 rounded-lg">
-            <p className="text-white text-md py-1"> Your BMI is...</p>
-            <div className="pb-4 text-3xl font-bold text-white">
-                Nothing
-            </div>
+            <p className={`text-white py-1 ${title == "Welcome!" ? 'text-2xl' : 'text-md'}`}> {title}</p>
+            <h1 className="pb-4 text-3xl font-bold text-white">
+                {result}
+            </h1>
             <div className="text-md text-white ">
-                Your BMI suggests you are a healthy weight. Your ideal weight is between...
+                {content}
             </div>
         </div>
       </div>

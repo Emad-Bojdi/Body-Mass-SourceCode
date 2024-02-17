@@ -1,51 +1,74 @@
-import BMIresult from "./BMIresult/BMIresult";
-import pic1 from "../../assets/Pic1.png";
 
+import pic1 from "../../assets/Pic1.png";
+import { useState } from "react";
+import MetricCalc from "./Calcwithmetricunits";
+import ImperialCalc from "./Calcwithimperialunits";
 const Bodymass = () => {
+  const [ImperialOpen, setImperialOpen] = useState(false);
+  const [MetricOpen, setMetricOpen] = useState(false);
+  const handleImperialOpen = () => {
+    setImperialOpen(true);
+    setMetricOpen(false);
+  };
+  const handleMetricOpen = () => {
+    setMetricOpen(true);
+    setImperialOpen(false);
+  };
   return (
     <>
-      <div className="w-full h-auto flex flex-col justify-center items-center">
-        <div className="w-4/5 h-auto flex flex-col absolute top-[400px] bg-white rounded-2xl shadow-2xl">
-          <h1 className="text-2xl font-bold text-left py-4 pl-4">
+      <div className="w-full h-auto flex flex-col justify-center items-center absolute">
+        <div className="w-4/5 h-auto flex flex-col absolute top-[-200px] bg-white rounded-2xl shadow-2xl ">
+          <h1 className="text-2xl font-bold text-center py-4  ">
             Enter your details below{" "}
           </h1>
           <div className="w-full h-auto flex flex-col justify-center items-center">
             <div className="w-4/5 h-auto flex py-4 justify-around">
               <div className="flex items-center">
-                <input type="radio" name="Metric" value="Metric" className="w-7 h-7 focus:ring-0 focus:ring-offset-0 checked:text-cyan-800 bg-white border-gray-500 mr-5"/>
+                <input
+                  type="radio"
+                  name="Metric"
+                  value={MetricOpen}
+                  onClick={handleMetricOpen}
+                  
+                  className={` transition ease-in delay-50 w-7 h-7 ring-0 ring-offset-0 text-white bg-white border-gray-500 mr-5 checked:w-5 checked:h-5 checked:text-cyan-700 checked:bg-none checked:bg-cyan-700 checked:ring-[9px] checked:ring-offset-0 checked:ring-cyan-100 ring-opacity-70 duration-250 ${
+                    ImperialOpen
+                      ? "checked:w-7 checked:h-7 checked:ring-0 checked:ring-offset-0 checked:ring-white checked:text-white checked:bg-white checked:border-gray-500 checked:mr-5"
+                      : ""
+                  }`}
+                />
                 <label htmlFor="Metric" className="text-md font-bold ">
                   {" "}
                   Metric{" "}
                 </label>
               </div>
               <div className="flex items-center">
-                <input type="radio" name="Imperial" value="Imperial" className="w-7 h-7 focus:ring-0 focus:ring-offset-0 checked:text-cyan-800 bg-white border-gray-500 mr-5" />
-                <label htmlFor="Imperial" className="text-md font-bold "> Imperial </label>
+                <input
+                  type="radio"
+                  name="Imperial"
+                  value={ImperialOpen}
+                  onClick={handleImperialOpen}
+                  className={` transition ease-in delay-50 w-7 h-7 ring-0 ring-offset-0 text-white bg-white border-gray-500 mr-5 checked:w-5 checked:h-5 checked:text-cyan-700 checked:bg-none checked:bg-cyan-700 checked:ring-[9px] checked:ring-offset-0 checked:ring-cyan-100 ring-opacity-70 duration-250 ${
+                    MetricOpen
+                      ? "checked:w-7 checked:h-7 checked:ring-0 checked:ring-white checked:ring-offset-0 checked:text-white checked:bg-white checked:border-gray-500 checked:mr-5 "
+                      : ""
+                  }`}
+                />
+                <label htmlFor="Imperial" className="text-md font-bold ">
+                  {" "}
+                  Imperial{" "}
+                </label>
               </div>
             </div>
-            <div className="w-full h-auto flex flex-col items-center">
-              <div className="w-3/4 h-auto flex flex-col relative">
-              <label htmlFor="Height" className="pb-2 text-gray-600"> Height </label>
-              <input type="number" name="Height"  placeholder="0" className="rounded-lg h-16 outline-none border-gray-300 focus:border-gray-300 focus:ring-0 pl-6 py-4 text-2xl font-bold"/>
-              <p className="absolute right-5 top-11 text-2xl font-bold text-cyan-800">
-                cm
-              </p>
-              </div>
-              <div className="w-3/4 h-auto flex flex-col relative">
-              <label htmlFor="Weight" className="pb-2 text-gray-600"> Weight </label>
-              <input type="number" name="Weight" placeholder="0" className="rounded-lg h-16 outline-none border-gray-300 focus:border-gray-300 focus:ring-0 pl-6 py-4 text-2xl font-bold"/>
-              <p className="absolute right-5 top-11 text-2xl font-bold text-cyan-800">
-                kg
-              </p>
-              </div>
-            </div>
-            <div className=""></div>
+            { ImperialOpen ? <ImperialCalc/> : <MetricCalc/>}
           </div>
-          <BMIresult/>
         </div>
-        <div className="w-full h-4/5 flex flex-col items-center">
-          <div className="w-full h-4/5 relative rounded-3xl bg-cyan-50 flex flex-col items-center top-[550px]">
-          <img src={pic1} alt=" a picture!" className="w-4/5 h-auto bg-inherit" />
+        <div className="w-full h-4/5 flex flex-col items-center relative">
+          <div className="w-full h-4/5 absolute rounded-3xl bg-cyan-50 flex flex-col items-center top-[480px]">
+            <img
+              src={pic1}
+              alt=" a picture!"
+              className="w-4/5 h-auto bg-inherit"
+            />
           </div>
         </div>
       </div>
@@ -54,6 +77,7 @@ const Bodymass = () => {
 };
 
 export default Bodymass;
-<style>
 
-</style>
+// className=" transition ease-in delay-50 w-7 h-7 ring-0 ring-offset-0 text-white bg-white border-gray-500 mr-5 checked:w-5 checked:h-5 checked:text-cyan-700 checked:bg-none checked:bg-cyan-700 checked:ring-[9px] checked:ring-offset-0 checked:ring-cyan-100 ring-opacity-70 duration-250"
+
+

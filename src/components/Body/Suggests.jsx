@@ -5,8 +5,8 @@ import { BsMoonStars} from "react-icons/bs"
 const Suggests = () => {
   return (
     <>
-      <div className="w-full h-auto flex flex-col items-center">
-        <div className="w-4/5 h-auto relative top-[590px] flex flex-col">
+      <div className="w-full h-auto flex flex-col items-center absolute">
+        <div className="w-4/5 h-auto absolute top-[900px] flex flex-col">
           <div className="w-full h-auto ">
             <h1 className="text-3xl font-bold">What your BMI result means</h1>
             <p className="pt-5 text-gray-600 text-lg">
@@ -20,7 +20,7 @@ const Suggests = () => {
             </p>
           </div>
         </div>
-        <div className="w-full/5 h-auto relative top-[590px] flex flex-col bg-cyan-50 bg-opacity-30 mt-10">
+        <div className="w-full/5 h-auto absolute flex flex-col bg-cyan-50 bg-opacity-30 mt-10 top-[1300px]">
         <Suggest
             icon={<PiBowlFoodLight className=' w-8 h-8 text-pink-600 bg-pink-200 ring-[15px] ring-pink-200 bg-opacity-80 ring-opacity-80 rounded-full'/>}
             title="Healthy eating"

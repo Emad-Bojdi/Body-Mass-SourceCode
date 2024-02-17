@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-    <div className="overflow-x-hidden">
+    <div className="w-full h-full overflow-x-hidden absolute z-0">
     <Header/>
     <Suggests/>
     <Limitations/>

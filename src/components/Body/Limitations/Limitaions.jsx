@@ -8,8 +8,8 @@ import { PiPerson } from "react-icons/pi";
 const Limitations = () => {
   return (
     <>
-      <div className="w-full h-auto flex flex-col items-center relative top-[700px] bg-cyan-50 bg-opacity-30">
-        <div className="w-4/5 h-auto flex flex-col items-center bg-white">
+      <div className="w-full h-auto flex flex-col items-center absolute bg-cyan-50 bg-opacity-30">
+        <div className="w-4/5 h-auto flex flex-col items-center bg-white absolute top-[2200px]">
           <h1 className="w-full h-auto text-4xl font-semibold text-center">
             {" "}
             Limitations of BMI{" "}
