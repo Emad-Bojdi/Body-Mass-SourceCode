@@ -8,8 +8,9 @@ import { PiPerson } from "react-icons/pi";
 const Limitations = () => {
   return (
     <>
-      <div className="w-full h-auto flex flex-col items-center absolute bg-cyan-50 bg-opacity-30">
-        <div className="w-4/5 h-auto flex flex-col items-center bg-white absolute top-[2200px]">
+      <div className="w-full h-auto flex flex-col items-center absolute bg-cyan-50 bg-opacity-30 ">
+        <div className="w-4/5 h-auto flex flex-col items-center bg-white absolute top-[2000px] lg:top-[1500px] shadow-lg p-8 xl:top-[1200px] xl:shadow-none xl:">
+          <div className="w-full h-auto flex flex-col ">
           <h1 className="w-full h-auto text-4xl font-semibold text-center">
             {" "}
             Limitations of BMI{" "}
@@ -20,7 +21,8 @@ const Limitations = () => {
             consider their BMI outcomes, and in certain cases, the measurement
             may not be beneficial to use .{" "}
           </p>
-          <div className="w-full h-auto bg-cyan-50 bg-opacity-30">
+          </div>
+          <div className="w-full h-auto bg-cyan-50 bg-opacity-30 lg:flex lg:flex-wrap lg:justify-around ">
             <Limitation
               icon={<BsGenderAmbiguous className="w-8 h-8 text-orange-500 mx-2"/>}
               title="Gender"

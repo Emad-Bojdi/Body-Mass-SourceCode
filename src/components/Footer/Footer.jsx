@@ -7,7 +7,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const Footer = () => {
   return (
     <>
-        <div className="w-full h-auto absolute top-[4500px]">
+        <div className="w-full h-auto absolute top-[4200px] lg:top-[3400px] xl:top-[3000px]">
           <div className="w-full h-full bg-cyan-800 sm:flex sm:flex-wrap sm:justify-center p-6 py-24 block">
             <div className=" h-auto w-full sm:basis-1/2 lg:m-6 lg:basis-1/3">
               <h1 className="text-white text-xl font-bold"> ABOUT ME </h1>

@@ -1,5 +1,4 @@
 
-import pic1 from "../../assets/Pic1.png";
 import { useState } from "react";
 import MetricCalc from "./Calcwithmetricunits";
 import ImperialCalc from "./Calcwithimperialunits";
@@ -17,13 +16,13 @@ const Bodymass = () => {
   return (
     <>
       <div className="w-full h-auto flex flex-col justify-center items-center absolute">
-        <div className="w-4/5 h-auto flex flex-col absolute top-[-200px] bg-white rounded-2xl shadow-2xl ">
-          <h1 className="text-2xl font-bold text-center py-4  ">
+        <div className="w-4/5 h-auto flex flex-col absolute top-[-220px] bg-white rounded-2xl shadow-2xl  lg:top-[-200px] xl:w-5/12 xl:right-[100px] xl:top-[-600px] ">
+          <h1 className="text-2xl font-bold text-center py-4 lg:text-left lg:pl-10">
             Enter your details below{" "}
           </h1>
           <div className="w-full h-auto flex flex-col justify-center items-center">
-            <div className="w-4/5 h-auto flex py-4 justify-around">
-              <div className="flex items-center">
+            <div className="w-4/5 h-auto flex py-4 justify-around lg:justify-start lg:w-full ">
+              <div className="flex items-center lg:pl-[40px] xl:pl-[30px]">
                 <input
                   type="radio"
                   name="Metric"
@@ -36,12 +35,12 @@ const Bodymass = () => {
                       : ""
                   }`}
                 />
-                <label htmlFor="Metric" className="text-md font-bold ">
+                <label htmlFor="Metric" className="text-md font-bold lg:text-lg ">
                   {" "}
                   Metric{" "}
                 </label>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center lg:pl-[305px] xl:pl-[200px]">
                 <input
                   type="radio"
                   name="Imperial"
@@ -53,22 +52,13 @@ const Bodymass = () => {
                       : ""
                   }`}
                 />
-                <label htmlFor="Imperial" className="text-md font-bold ">
+                <label htmlFor="Imperial" className="text-md font-bold lg:text-lg ">
                   {" "}
                   Imperial{" "}
                 </label>
               </div>
             </div>
             { ImperialOpen ? <ImperialCalc/> : <MetricCalc/>}
-          </div>
-        </div>
-        <div className="w-full h-4/5 flex flex-col items-center relative">
-          <div className="w-full h-4/5 absolute rounded-3xl bg-cyan-50 flex flex-col items-center top-[480px]">
-            <img
-              src={pic1}
-              alt=" a picture!"
-              className="w-4/5 h-auto bg-inherit"
-            />
           </div>
         </div>
       </div>

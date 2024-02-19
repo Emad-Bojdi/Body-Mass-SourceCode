@@ -39,8 +39,8 @@ const ImperialCalc = () => {
   });
   return (
     <>
-      <div className="w-full h-auto flex flex-col items-center">
-        <div className="w-3/4 h-auto flex flex-col relative">
+      <div className="w-full h-auto flex flex-col items-center justify-center lg:w-full lg:h-auto lg:flex lg:flex-row lg:justify-around">
+        <div className="w-4/5 h-auto flex flex-col  relative lg:w-5/12 ">
           <label htmlFor="Height" className="pb-2 text-gray-600 ">
             {" "}
             Height{" "}
@@ -49,6 +49,7 @@ const ImperialCalc = () => {
             type="number"
             name="Height"
             placeholder="0"
+            inputMode="numeric"
             value={heightValue}
             onChange={(e) => setHeightValue(e.target.value)}
             className="rounded-lg h-16 outline-none border-gray-300 focus:border-gray-300 focus:ring-0 pl-6 py-4 text-2xl font-bold"
@@ -57,7 +58,7 @@ const ImperialCalc = () => {
             in
           </p>
         </div>
-        <div className="w-3/4 h-auto flex flex-col relative">
+        <div className="w-4/5 h-auto flex flex-col relative lg:w-5/12">
           <label htmlFor="Weight" className="pb-2 text-gray-600">
             {" "}
             Weight{" "}
@@ -66,6 +67,7 @@ const ImperialCalc = () => {
             type="number"
             name="Weight"
             placeholder="0"
+            inputMode="numeric"
             value={weightValue}
             onChange={(e) => setWeightValue(e.target.value)}
             className="rounded-lg h-16 outline-none border-gray-300 focus:border-gray-300 focus:ring-0 pl-6 py-4 text-2xl font-bold"

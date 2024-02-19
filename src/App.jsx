@@ -1,19 +1,18 @@
-import Header from "./components/Header/Header"
-import Suggests from "./components/Body/Suggests"
-import Limitations from "./components/Body/Limitations/Limitaions"
-import Footer from "./components/Footer/Footer"
+import Header from "./components/Header/Header";
+import Suggests from "./components/Body/Suggests";
+import Footer from "./components/Footer/Footer";
+import DesktopLimitations from "./components/Body/Limitations/DesktopLimitations";
 function App() {
-
   return (
     <>
-    <div className="w-full h-full overflow-x-hidden absolute z-0">
-    <Header/>
-    <Suggests/>
-    <Limitations/>
-    <Footer/>
-    </div>
+      <div className="w-full h-full overflow-x-hidden absolute z-0">
+        <Header />
+        <Suggests />
+        <DesktopLimitations />
+        <Footer />
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

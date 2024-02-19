@@ -40,8 +40,8 @@ const MetricCalc = () => {
   });
   return (
     <>
-      <div className="w-full h-auto flex flex-col items-center">
-        <div className="w-3/4 h-auto flex flex-col relative">
+      <div className="w-full h-auto flex flex-wrap items-center justify-center lg:w-full lg:h-auto lg:flex lg:flex-wrap-reverse lg:justify-around">
+        <div className="w-4/5 h-auto flex flex-col relative lg:w-5/12 ">
           <label htmlFor="Height" className="pb-2 text-gray-600 ">
             {" "}
             Height{" "}
@@ -50,6 +50,7 @@ const MetricCalc = () => {
             type="number"
             name="Height"
             placeholder="0"
+            
             value={heightValue}
             onChange={(e) => setHeightValue(e.target.value)}
             className="rounded-lg h-16 outline-none border-gray-300 focus:border-gray-300 focus:ring-0 pl-6 py-4 text-2xl font-bold"
@@ -58,7 +59,7 @@ const MetricCalc = () => {
             cm
           </p>
         </div>
-        <div className="w-3/4 h-auto flex flex-col relative">
+        <div className="w-4/5 h-auto flex flex-col relative lg:w-5/12 ">
           <label htmlFor="Weight" className="pb-2 text-gray-600">
             {" "}
             Weight{" "}
@@ -67,6 +68,7 @@ const MetricCalc = () => {
             type="number"
             name="Weight"
             placeholder="0"
+            
             value={weightValue}
             onChange={(e) => setWeightValue(e.target.value)}
             className="rounded-lg h-16 outline-none border-gray-300 focus:border-gray-300 focus:ring-0 pl-6 py-4 text-2xl font-bold"
@@ -82,3 +84,18 @@ const MetricCalc = () => {
 };
 
 export default MetricCalc;
+
+
+{/* <style>
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button{
+    -webkit-appearance:none;
+    margin:0;
+  }
+  input[type=number]{
+    -moz-appearance:textfield
+  }
+
+
+
+</style> */}
